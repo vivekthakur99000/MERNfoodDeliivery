@@ -89,7 +89,7 @@ function NavBar({ setShowLogin }) {
           <div className="navbar-profile ">
             <img src={assets.profile_icon} alt="" />
             <ul className="nav-profile-dropdown ">
-              <li className="flex items-center gap-1 cursor-pointer" >
+              <li className="flex items-center gap-1 cursor-pointer" onClick={() => navigate('/myorders')} >
                 <img src={assets.bag_icon} alt="" className="w-[20px]" />
                 <p className="hover:text-orange-500" >Orders</p>
               </li>

@@ -1,9 +1,10 @@
 import React, { useContext } from "react";
 import { StoreContext } from "../../context/StoreContext";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
 
 function Cart() {
-  const { cartItems, food_list, removeFromCart, getTotalCartAmount, url } =
+  const { cartItems, food_list,  removeFromCart, getTotalCartAmount, url } =
     useContext(StoreContext);
 
   const navigate = useNavigate();

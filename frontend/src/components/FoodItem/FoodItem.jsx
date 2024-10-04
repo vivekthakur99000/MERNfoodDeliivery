@@ -1,5 +1,5 @@
-import React, { useContext, useState } from "react";
-import { assets } from "../../assets/assets";
+import React, { useContext } from "react";
+import { assets } from "../../assets/assets.js";
 import { StoreContext } from "../../context/StoreContext";
 
 function FoodItem({ id, name, price, description, image }) {
@@ -14,7 +14,7 @@ function FoodItem({ id, name, price, description, image }) {
           src={url+"/images/"+image}
           alt=""
         />
-        {!cartItems?.[id] ? (
+        {!cartItems[id] ? (
           <img
             className="add w-[35px] absolute bottom-4 right-4 cursor-pointer rounded-full  "
             onClick={() => addToCart(id)}
